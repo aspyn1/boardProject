@@ -1,8 +1,14 @@
 // 댓글 목록 조회
 function selectCommentList(){
     
-    fetch()
-    .then()
+    // REST(REpresentational State Transfer) API
+    // 자원을 이름(url 주소)으로 구분하여 자원의 상태를 주고받는 것 
+    
+    // -> 주소를 명시하고 Http Method(GET, POST, PUT, DELETE)를 이용해
+    //		지정된 자원에 대한 CRUD를 진행할 수 있다
+    
+    fetch("/comment?boardNo=" + boardNo)
+    .then(response => response.json())
     .then(cList => {
         console.log(cList);
 
