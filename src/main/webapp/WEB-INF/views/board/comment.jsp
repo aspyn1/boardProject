@@ -36,12 +36,12 @@
 	                
 	                <!-- 버튼 영역 -->
 	                <div class="comment-btn-area">
-	                    <button>답글</button>   
+	                    <button onclick="showInsertComment(${comment.commentNo}), this">답글</button>   
 	                        
 	                    <c:if test="${loginMember.memberNo == comment.memberNo}">
 		                    <!-- 로그인 회원과 댓글 작성자가 같은 경우 -->  
-		                    <button>수정</button>     
-		                    <button>삭제</button>
+		                    <button onclick="showUpdateComment(${comment.commentNo}, this)">수정</button>     
+		                    <button onclick="deleteCommnet(${comment.commentNo})">삭제</button>
 	                    </c:if>
 	                </div>
 	            </li>        	
