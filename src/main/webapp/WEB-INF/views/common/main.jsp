@@ -51,7 +51,6 @@
             	<button id="btn2">조회</button>
             	<ul id="result2">
             	</ul>
-            	
             
             </section>
             

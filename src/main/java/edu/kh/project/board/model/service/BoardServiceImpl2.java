@@ -33,8 +33,11 @@ public class BoardServiceImpl2 implements BoardService2{
 	 */
 	@Transactional(rollbackFor = Exception.class)
 	@Override
-	public int boardInsert(Board board, List<MultipartFile> images, String webPath, String filePath) 
-			throws IllegalStateException, IOException {
+	public int boardInsert(
+			Board board, 
+			List<MultipartFile> images, 
+			String webPath, 
+			String filePath) throws IllegalStateException, IOException {
 		
 		// 0. XSS 방지 처리
 		board.setBoardContent( Util.XSSHandling( board.getBoardContent()) );
@@ -133,7 +136,11 @@ public class BoardServiceImpl2 implements BoardService2{
 	 */
 	@Override
 	@Transactional(rollbackFor = Exception.class)
-	public int boardUpdate(Board board, List<MultipartFile> images, String webPath, String filePath,
+	public int boardUpdate(
+			Board board, 
+			List<MultipartFile> images, 
+			String webPath, 
+			String filePath,
 			String deleteList) throws IllegalStateException, IOException {
 		
 		// 1. 게시글 제목/내용만 수정

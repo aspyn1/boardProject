@@ -22,8 +22,9 @@
 		<typeAlias type="edu.kh.project.board.model.dto.Comment" alias="Comment"/>	
 		
 		<typeAlias type="edu.kh.project.chatting.model.dto.ChattingRoom" alias="ChattingRoom"/>	
-		<typeAlias type="edu.kh.project.chatting.model.dto.Message" alias="Message"/>	
-	</typeAliases>
+		<typeAlias type="edu.kh.project.chatting.model.dto.Message" alias="Message"/>
+		<typeAlias type="com.kh.test.user.model.vo.User" alias="User"/>
+</typeAliases>
 
 
 	<!-- mapper파일(SQL 작성되는파일) 위치 등록 부분 -->
@@ -35,6 +36,7 @@
 		<mapper resource="/mappers/board-mapper.xml"/>
 		<mapper resource="/mappers/comment-mapper.xml"/>
 		<mapper resource="/mappers/chatting-mapper.xml"/>
+		<mapper resource="/mappers/user-mapper.xml"/>
 	</mappers>
 
 
