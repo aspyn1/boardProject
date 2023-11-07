@@ -11,16 +11,14 @@ public class UserServiceImpl implements UserService {
 	@Autowired	
 	private UserDAO dao;
 
-	/** 회원 검색
+	/** 회원 검색(회원번호로)
 	 *
 	 */
 	@Override
-	public User searchId(String userId) {
+	public User searchUser(String userNo) {
 		
-		// dao 호출
-		return dao.searchId(userId);
+		return dao.searchUser(userNo);
 	}
-	
 	
 	
 

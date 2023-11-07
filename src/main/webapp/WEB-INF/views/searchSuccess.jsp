@@ -24,8 +24,6 @@
 		<td>${user.userAge}</td>
 		</tr>
 
-		<!-- #이 아닌 $ 표기해야함 -->
-		<!-- user에 저장된 회원정보를 가져와 담아줌 -->
 	</table>
 </body>
 </html>

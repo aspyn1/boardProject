@@ -4,11 +4,11 @@ import com.kh.test.user.model.vo.User;
 
 public interface UserService {
 
-	/** 회원 검색
-	 * @param userId
+	/** 회원 검색(회원번호로)
+	 * @param userNo
 	 * @return
 	 */
-	User searchId(String userId);
+	User searchUser(String userNo);
 
 
 }

@@ -11,9 +11,7 @@
 
 	<select id="selectUser" resultMap="user_rm">
 		SELECT * FROM TB_USER
-		WHERE USER_ID = #{userId}
+		WHERE USER_NO = #{userNo}
 	</select>
-	<!-- userId 자체를 검색하는게 아니라 
-	검색하는 단어가 userId에 포함되는 단어일 경우를 조회 -->
 
 </mapper>

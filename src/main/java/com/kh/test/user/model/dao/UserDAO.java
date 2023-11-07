@@ -11,17 +11,15 @@ public class UserDAO {
 	@Autowired
 	private SqlSessionTemplate sqlSession;
 
-	/** 회원 검색
-	 * @param userId
+	/** 회원 검색(회원번호로)
+	 * @param userNo
 	 * @return
 	 */
-	public User searchId(String userId) {
+	public User searchUser(String userNo) {
 		
-		// 매퍼에서 userId를 검색해서 회원정보 반환받기
-		return sqlSession.selectOne("userMapper.searchId", userId);
+		return sqlSession.selectOne("userMapper.selectUser", userNo);
 	}
-	
-	
-	
+
+
 
 }

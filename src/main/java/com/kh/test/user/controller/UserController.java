@@ -14,25 +14,20 @@ public class UserController {
 	@Autowired
 	private UserService service;
 	
-	// index.jsp의 form 태그 액션을 아래 메소드에 연결
-	@GetMapping("/selectUser")
-	public String searchId(String userId, Model model) {
+	@GetMapping("/searchUser")
+	public String searchUser(String userNo, Model model) {
 
-		// userId를 가지고 dao까지 가서 조회하여 유저 검색 결과를 user에 저장
-		User user = service.searchId(userId);
+		User user = service.searchUser(userNo);
 
-		// 저장된 user에서 userId를 가져와 userId에 저장
 		model.addAttribute("user", user);
 
-		if(userId != null) { // 반환되는 userId가 있을때
+		if(userNo != null) { 
 
 			return "searchSucess";
-			//searchSucess jsp로 이동
 
 		}else {
 
 			return "searchFail";
-			//searchFail jsp로 이동
 		}
 
 	}
